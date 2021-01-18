@@ -62,8 +62,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 
     // метод срабатывает когда ячейка выбрана
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let argument = dataSource[indexPath.row]
-        guard let item = collectionView.cellForItem(at: indexPath) as CustomCollectionViewCell else {return}
+    let argument = dataSource[indexPath.row]
+    let item = collectionView.cellForItem(at: indexPath) as! CustomCollectionViewCell
         alert_title = argument.title
         alet_message = argument.description
         item.checkImageView.image = #imageLiteral(resourceName: "checkmark")
