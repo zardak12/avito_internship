@@ -16,7 +16,7 @@ class CustomCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var checkImageView: UIImageView!
     
-    
+      //MARK: - Настройка item
     func configure(with list : Page){
         avaImageView.downloaded(from: list.imageUrl)
         nameLabel.text = list.title
@@ -27,4 +27,6 @@ class CustomCollectionViewCell: UICollectionViewCell {
         priceLabel.text = list.price
     }
 }
+
+
 
