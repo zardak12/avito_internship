@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5gF-7H-mYa">
-                                <rect key="frame" x="30" y="792" width="354" height="40"/>
+                                <rect key="frame" x="30" y="802" width="354" height="40"/>
                                 <color key="backgroundColor" red="0.07520345598" green="0.65882813929999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="gOi-ye-nxq"/>
@@ -31,7 +31,7 @@
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="5Ht-ee-3np">
-                                <rect key="frame" x="0.0" y="244" width="414" height="528"/>
+                                <rect key="frame" x="0.0" y="216.5" width="414" height="565.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="oCr-ur-Td8">
                                     <size key="itemSize" width="373" height="140"/>
@@ -133,19 +133,17 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5Ht-ee-3np" secondAttribute="trailing" id="7bD-ux-Vzd"/>
-                            <constraint firstItem="5Ht-ee-3np" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="Cio-w5-abh"/>
                             <constraint firstItem="llY-Mq-sIu" firstAttribute="top" secondItem="xKQ-03-rvc" secondAttribute="bottom" constant="60" id="Gwu-LO-Vne"/>
-                            <constraint firstItem="llY-Mq-sIu" firstAttribute="leading" secondItem="xKQ-03-rvc" secondAttribute="leading" id="Oco-Rg-ly6"/>
                             <constraint firstItem="5gF-7H-mYa" firstAttribute="top" secondItem="5Ht-ee-3np" secondAttribute="bottom" constant="20" id="R9c-Ig-TXk"/>
                             <constraint firstItem="5Ht-ee-3np" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="VCM-eD-iaz"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5gF-7H-mYa" secondAttribute="trailing" constant="30" id="VUs-3v-Vur"/>
                             <constraint firstItem="xKQ-03-rvc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="d0c-EJ-o03"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5Ht-ee-3np" secondAttribute="bottom" constant="90" id="dLK-Uj-Rnr"/>
                             <constraint firstItem="5gF-7H-mYa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="hY3-w3-Vtr"/>
                             <constraint firstItem="llY-Mq-sIu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="jxl-FX-efy"/>
                             <constraint firstItem="xKQ-03-rvc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="kgX-Zj-nDR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="llY-Mq-sIu" secondAttribute="trailing" constant="40" id="tDn-oO-oF8"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5gF-7H-mYa" secondAttribute="bottom" constant="30" id="wj2-4q-Iew"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5gF-7H-mYa" secondAttribute="bottom" constant="20" id="wj2-4q-Iew"/>
+                            <constraint firstItem="5Ht-ee-3np" firstAttribute="top" secondItem="llY-Mq-sIu" secondAttribute="bottom" constant="40" id="xek-zb-csT"/>
                         </constraints>
                     </view>
                     <connections>

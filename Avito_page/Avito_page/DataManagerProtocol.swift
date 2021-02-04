@@ -8,5 +8,12 @@
 import Foundation
 
 protocol DataManagerProtocol {
-    func asyncGetCollectionView(completion:@escaping([Page])->Void )
+    /* парсер данных который строго берет данные из нашего JSON файла,
+    таким образом оставляя только валидные Item в нашем collectionView
+    */
+    func parse()
+    
+    // метод который позволит достать данные из JSON файла во ViewController 
+    func asyncGetCollectionView(completion:@escaping([Page])->Void)
+    
 }

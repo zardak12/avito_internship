@@ -8,16 +8,22 @@
 import Foundation
 import UIKit
 
+// ключи для хранение наших данных настроек
+enum UserDefaultsKeys{
+    static let labelKey = "labelKey" // ключ для лейбла
+    static let buttonKey = "buttonKey" // ключ для кнопки
+}
+
 class DataManager : DataManagerProtocol {
     static let sharedData = DataManager()
+    var userDefaults = UserDefaults.standard
     private var myData = [Page]()
-    public var label: String?
-    public var button: String?
     private init(){
         parse()
     }
     
-    // парсер для json файла
+    
+    //парсер для json файла
     func parse(){
             let url = Bundle.main.url(forResource: "result", withExtension: "json")
             guard let jsonData = url else{return}
@@ -27,9 +33,11 @@ class DataManager : DataManagerProtocol {
                 if let result = dictionary["result"] as? [String:Any]{
                     if let list = result["list"] as? [[String:Any]]{
                         if let title = result["title"] as? String{
-                            label = title
+                            // сохраняем название нашего лейбла
+                            userDefaults.setValue(title, forKey: UserDefaultsKeys.labelKey) // сохраняем имя лэйбла
                         if let buttonText =  result["selectedActionTitle"] as? String{
-                            button = buttonText
+                            // сохраняем название нашей кнопки 
+                            userDefaults.setValue(buttonText, forKey: UserDefaultsKeys.buttonKey) // сохранем имя кнопки
                         for array in list {
                             guard let myId = array["id"] as? String else {return}
                             guard let myTitle = array["title"] as? String else {return}

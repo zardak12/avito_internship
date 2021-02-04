@@ -14,7 +14,6 @@ class ViewController: UIViewController{
     @IBOutlet weak var buttonOutlet: UIButton!
     @IBOutlet weak var labelMenu: UILabel!
    
-    
     var alert_title : String?
     var alert_message : String?
     var dataSource = [Page]()
@@ -42,9 +41,13 @@ class ViewController: UIViewController{
         collectionView.delegate = self
         collectionView.dataSource = self
         buttonExitOutlet.setImage(#imageLiteral(resourceName: "CloseIconTemplate"), for: .normal)
+        // достаем название нашей кнопки
+        let button = UserDefaults.standard.string(forKey: UserDefaultsKeys.buttonKey)
         buttonOutlet.layer.cornerRadius = 3
-        buttonOutlet.setTitle(DataManager.sharedData.button, for: .normal)
-        labelMenu.text = DataManager.sharedData.label
+        buttonOutlet.setTitle(button, for: .normal)
+        //достаем название нашего лейбла
+        let label =  UserDefaults.standard.string(forKey: UserDefaultsKeys.labelKey)
+        labelMenu.text = label
         labelMenu.isHighlighted = true
     }
     

@@ -15,5 +15,5 @@ struct Page {
     let imageUrl: String
     let price:String
     let isSelected:Bool
-
 }
+
